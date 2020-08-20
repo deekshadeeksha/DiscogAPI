@@ -1,0 +1,322 @@
+*
+{
+    font-family: 'Permanent Marker', cursive;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/************Header**********/
+#header
+{
+    background: transparent
+}
+#header-nav
+{
+    float: right;
+}
+#navigation
+{
+    display: flex;
+    padding-right: 40px;
+    margin-top: 5px;;
+}
+.nav-li
+{
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+    border-radius: 4px;
+}
+.nav-li:hover
+{
+    background-color:#A9BBCA;
+}
+.nav-li a
+{
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+/****************MainPage***************/
+#mainDiv
+{
+    background-image: url('images/casstte-bg.jpg');
+    background-size: cover;
+}
+.box {
+    height: 100%;
+    width: 50%;
+    height: 100vh;
+}
+h2 {
+    position: absolute;
+    top: 53.3%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    color: #496372;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+.box div {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: animate 4s linear infinite;
+    content:url('images/note1.png');
+    background-color:transparent;
+}
+.box div:nth-child(1) {
+    top: 53%;
+    left: 23%;
+    animation: animate 11s linear infinite;
+}
+.box div:nth-child(2) {
+    top: 53%;
+    left: 25%;
+    animation: animate 4s linear infinite;
+}
+.box div:nth-child(3) {
+    top: 53%;
+    left: 33%;
+    animation: animate 5s linear infinite;
+}
+.box div:nth-child(4) {
+    top: 53%;
+    left: 38%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-child(5) {
+    top: 53%;
+    left: 17%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(6) {
+    top: 53%;
+    left: 44%;
+    animation: animate 5s linear infinite;
+}
+.box div:nth-child(7) {
+    top: 53%;
+    left: 30%;
+    animation: animate 8s linear infinite;
+}
+.box div:nth-child(8) {
+    top: 53%;
+    left: 42%;
+    animation: animate 3s linear infinite;
+}
+.box div:nth-child(9) {
+    top: 53%;
+    left: 19%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(10) {
+    top: 53%;
+    left: 12%;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(50deg);
+    }
+    100% {
+        transform: scale(1.6) translateY(-300px) rotate(360deg);
+    }
+}
+    
+/****************Discog***************/
+
+#discogDiv
+{
+    background-color: #CFD9D0;
+    height: 9000px;
+}
+#discogHeading
+{
+    position: absolute;
+    top: 10%;
+    width: 1000px;
+    margin-left: 250px;
+    margin-top: 40px;
+}
+#discogHeading h3 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ #discogHeading h3 span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+.search
+{
+    padding-top: 180px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.search input{
+    padding: 10px;
+    width: 800px;
+    text-align: center;
+}
+.search input[type=text] {
+    border: 1px solid #ccc;  
+    font-size:24px;
+}
+.search i { 
+    position: absolute; 
+    font-size: 28px;
+    padding-top: 13px;
+    padding-left: 13px;
+
+}
+.discogTableDiv
+{
+    padding: 20px;
+}
+#discogTable
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+#discogTable td, #discogTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  } 
+  #discogTable td
+  {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #discogTable tr{background-color: #cce0e0;}
+  
+  #discogTable tr:hover {background-color: #e5efef;}
+  
+  #discogTable th {
+    padding:8px;
+    text-align: left;
+    background-color: #006666;
+    color: white;
+    font-weight: normal;
+  }
+  #firstTd
+  {
+      width: 30px;
+  }
+  #discogTable button
+  {
+      height: 70px;
+      width: 70px;
+      padding: 10px;
+      background-color: lightseagreen;
+      color:white;
+      border: none;
+      font-size: 24px;
+      border-radius: 50%;
+      transition: 1s;
+  }
+  #discogTable button:hover
+  {
+    background-color: green;
+  }
+/****************Playlist***************/
+
+#playlistDiv
+{
+    padding-top: 150px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: #CFD9D0;
+    height: 9000px;
+}
+#playlistHeading
+{
+    position: absolute;
+    top: 10%;
+    width: 1000px;
+    margin-left: 200px;
+    margin-top: 40px;
+}
+#playlistHeading h3 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ #playlistHeading h3 span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+#selectionDiv
+{
+    padding-bottom: 20px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+.optionGenre,select
+{
+    font-size: 20px;
+}
+select
+{
+    padding: 5px;
+}
+#playlistTable
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+#playlistTable td, #playlistTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-weight: normal;
+    text-align: center;
+  } 
+#playlistTable td
+  {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #playlistTable tr{background-color: #cce0e0;}
+  
+  #playlistTable tr:hover {background-color: #e5efef;}
+  
+  #playlistTable th {
+    padding:8px;
+    text-align: left;
+    background-color: #006666;
+    color: white;
+  }
+  .playlistBtn
+  {
+      height: 60px;
+      width: 60px;
+      padding: 10px;
+      background-color: #f4511e;
+      color:white;
+      border: none;
+      font-size: 14px;
+      border-radius: 50%;
+      opacity: 0.6;
+      transition: 0.3s;
+  }
+  .playlistBtn:hover
+  {
+        opacity: 1
+  }
+  a
+  {
+      text-decoration: none;
+      color: #006666;
+  }
