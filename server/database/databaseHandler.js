@@ -22,7 +22,7 @@ function getAllGenres(request, response) {//return all the datat from playlist t
       response.send(results)
     });  
 }
-function addToPlaylist(request, response) {//adding a song to tarck tables
+function addToPlaylist(request, response) {//adding a song to track tables
 
         pool.query("SELECT id FROM playlist where title=$1",[request.body.genre[0]], function (error, results, fields) {//fetches id from playlist table of specific song
             if (error) throw error;
@@ -53,9 +53,15 @@ function addToPlaylist(request, response) {//adding a song to tarck tables
             }
             else
             {
-                pool.query("INSERT INTO track (playlist_id, title, uri, master_id, image, country)VALUES ($1, $2, $3, $4, $5, $6)",[1, request.body.title, request.body.uri, request.body.master_id, request.body.thumb, request.body.country], function (error, results, fields) {
+                pool.query("SELECT id FROM playlist where title='Default'", function (error, results, fields) {
                     if (error) throw error;
+                    let genre=results.rows
+                    console.log(genre.id)
+                    pool.query("INSERT INTO track (playlist_id, title, uri, master_id, image, country)VALUES ($1, $2, $3, $4, $5, $6)",[genre[0].id, request.body.title, request.body.uri, request.body.master_id, request.body.thumb, request.body.country], function (error, results, fields) {
+                        if (error) throw error;
+                    });
                 });
+                
             }
         });
 }
